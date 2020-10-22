@@ -4,30 +4,44 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.activiti</groupId>
-    <artifactId>activiti-root</artifactId>
-    <version>7.0.0.Beta1</version>
+    <artifactId>activiti-parent</artifactId>
+    <version>7.1.0-M7</version>
   </parent>
+  <groupId>org.activiti</groupId>
   <artifactId>activiti-api</artifactId>
-  <name>Activiti :: Runtime API Parent</name>
+  <name>Activiti :: API :: Parent</name>
   <packaging>pom</packaging>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.activiti</groupId>
+        <artifactId>activiti-api-task-runtime-impl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.activiti</groupId>
+        <artifactId>activiti-api-model-shared-impl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.activiti</groupId>
+        <artifactId>activiti-api-process-model-impl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.activiti</groupId>
+        <artifactId>activiti-api-task-model-impl</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <modules>
-    <module>activiti-common-model-api</module>
-    <module>activiti-common-model-api-impl</module>
-    <module>activiti-common-runtime-api</module>
-    <module>activiti-common-runtime-api-impl</module>
-    <module>activiti-process-model-api</module>
-    <module>activiti-process-model-api-impl</module>
-    <module>activiti-process-runtime-api</module>
-    <module>activiti-process-runtime-api-impl</module>
-    <module>activiti-task-model-api</module>
-    <module>activiti-task-model-api-impl</module>
-    <module>activiti-task-runtime-api</module>
-    <module>activiti-task-runtime-api-impl</module>
-    <module>activiti-cloud-common-model-api</module>
-    <module>activiti-cloud-common-model-api-impl</module>
-    <module>activiti-cloud-process-model-api</module>
-    <module>activiti-cloud-process-model-api-impl</module>
-    <module>activiti-cloud-task-model-api</module>
-    <module>activiti-cloud-task-model-api-impl</module>
+    <module>activiti-api-dependencies</module>
+    <module>activiti-api-model-shared</module>
+    <module>activiti-api-runtime-shared</module>
+    <module>activiti-api-process-model</module>
+    <module>activiti-api-process-runtime</module>
+    <module>activiti-api-task-model</module>
+    <module>activiti-api-task-runtime</module>
   </modules>
 </project>
